@@ -27,7 +27,7 @@ Press CTRL+C to quit
  * Restarting with stat
 ----- RebarVista DEBUG INFO -----
 Current Working Directory: C:\Users...
-Model Config Path: C:/Users/.../model/mask_rcnn_R_101_FPN_3x.yaml
+Model Config Path: C:/Users/.../model/mask_rcnn_R_101_FPN_3x.yaml 
 Model Weights Path: C:/Users/.../model/model_final.pth
 Config Exists: True
 Weights Exist: True
