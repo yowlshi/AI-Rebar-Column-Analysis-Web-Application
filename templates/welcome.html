@@ -1,0 +1,21 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to RebarVista</title>
+    <!-- Link to a separate CSS file if needed -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
+</head>
+<body>
+    <div class="welcome-container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="245" height="75" alt="RebarVista Logo">
+        <h1>Welcome to RebarVista!</h1>
+        <p>Your go-to tool for rebar detection and volume calculation.</p>
+        <a href="{{ url_for('index') }}" class="start-button">Start Rebar Detection</a>
+    </div>
+    <!-- Link to a separate JS file if needed -->
+    <script src="{{ url_for('static', filename='js/welcome.js') }}"></script>
+</body>
+</html>

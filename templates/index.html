@@ -1,0 +1,117 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RebarVista - Rebar Detection & Volume Calculation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="226" height="85" alt="RebarVista Logo" class="center-logo">
+        <h1 class="text-center mb-4">RebarVista</h1>
+        <p class="text-center">Rebar Detection and Volume Calculation</p>
+        
+        <!-- Alert Placeholder -->
+        <div id="alert-placeholder" class="mb-4"></div>
+        
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="text-center mb-4" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Processing...</span>
+            </div>
+            <p class="mt-2">Processing image, please wait...</p>
+        </div>
+
+        <div class="row">
+            <!-- Image Capture Section -->
+            <div class="col-md-6">
+                <div class="card p-4 mb-4 shadow-sm">
+                    <h4 class="card-title text-center mb-3">Upload Rebar Image</h4>
+                    <form id="upload-form" action="{{ url_for('process_image') }}" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <input type="file" accept="image/*" capture="environment" class="form-control" id="camera" name="image" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Detect Rebar Sections</button>
+                    </form>
+                </div>
+
+                <!-- Volume Information Table -->
+                <div id="volume-info" class="card p-4 mb-4 shadow-sm" style="display: none;">
+                    <h4 class="card-title">Volume Information</h4>
+                    <div style="max-height: 200px; overflow-y:auto; margin-bottom:15px;">
+                        <table id="volume-table" class="table table-striped table-bordered" style="width:100%; font-size:0.9rem;">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Segment No.</th>
+                                    <th>Volume (cc)</th>
+                                    <th>Width (cm)</th>
+                                    <th>Length (cm)</th>
+                                    <th>Height (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot class="table-secondary">
+                                <tr>
+                                    <td colspan="5" id="total-volume-cell" style="text-align:right; font-weight:bold;">
+                                        Total Volume: 0.00 cc
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button id="download-csv" class="btn btn-success">Download CSV</button>
+                        <button id="download-pdf" class="btn btn-danger">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processed Image Display -->
+            <div class="col-md-6">
+                <div id="processed-image-container" class="card p-4 shadow-sm" style="display: none;">
+                    <h4 class="card-title">Processed Image</h4>
+                    <a href="" id="processed-image-link" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img id="processed-image" src="" alt="Processed Image" class="img-fluid rounded mb-3">
+                    </a>
+                    <button id="download-image" class="btn btn-success w-100">Download Processed Image</button>
+                </div>
+            </div>
+      
+            <!-- Image Modal for Enlarged View -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Processed Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <img id="modal-image" src="" alt="Processed Image" class="img-fluid rounded">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script>
+        window.addEventListener('load', function() {
+          // Check if this navigation is a reload
+          if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            window.location.href = "/";
+          }
+        });
+      </script>
+</body>
+</html>
