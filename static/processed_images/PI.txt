@@ -1,0 +1,1 @@
+this is where the processed images of the web app will be delivered.
