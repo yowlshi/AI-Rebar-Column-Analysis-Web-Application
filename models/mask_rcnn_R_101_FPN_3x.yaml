@@ -17,3 +17,4 @@ INPUT:
 
 #change the '_BASE_' model path with the path where you downloaded the Base-RCNNN-FPN.yaml model
 #also change for the weights path with the path were you downloaded the R-101.pkl model
+#search and download R-101.pkl here 'https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md'
