@@ -1,0 +1,1 @@
+create a virtual environment python inside the folder of the web app via vscode terminal
