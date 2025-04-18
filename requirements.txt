@@ -1,0 +1,17 @@
+absl-py==2.1.0
+antlr4-python3-runtime==4.9.3
+black==24.10.0
+cloudpickle==3.1.0
+cycler==0.12.1
+-e ./detectron2
+fvcore==0.1.5.post20221221
+iopath==0.1.9
+matplotlib==3.9.3
+numpy==1.24.3
+opencv-python-headless==4.10.0.84
+pillow==11.0.0
+flask==3.1.0
+flask-cors==5.0.0
+torch==1.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
