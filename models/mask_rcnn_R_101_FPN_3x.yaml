@@ -1,6 +1,6 @@
-_BASE_: "C:/Users/angelo/Downloads/Angelo/Rebar web app/model/Base-RCNN-FPN.yaml"
+_BASE_: "C:/Users/.../Rebar web app/model/Base-RCNN-FPN.yaml"
 MODEL:
-  WEIGHTS: "C:/Users/angelo/Downloads/Angelo/Rebar web app/model/R-101.pkl"
+  WEIGHTS: "C:/Users/.../Rebar web app/model/R-101.pkl"
   MASK_ON: True
   ROI_HEADS:
     NUM_CLASSES: 1  # Assuming one class: rebar
