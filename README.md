@@ -6,7 +6,7 @@ A tool for rebar detection and volume calculation using Detectron2 and Mask R-CN
    git clone https://github.com/facebookresearch/detectron2
    ```
 2. Download the required model files from our Google Drive repository:
-   - Access all model files here: [RebarVista Model Files](https://drive.google.com/drive/folders/1bXmBKyZlDxDyZifHVBVSFXJZoFofEVYZ?usp=sharing)
+   - Access all model files here: [Web App Models](https://drive.google.com/drive/folders/1bXmBKyZlDxDyZifHVBVSFXJZoFofEVYZ?usp=sharing)
    - You'll need both `R-101.pkl` and `model_final.pth`
 3. Update the model configuration paths in `models/mask_rcnn_R_101_FPN_3x.yaml`:
    - Set the `_BASE_` path to the location of your downloaded `Base-RCNN-FPN.yaml` file
