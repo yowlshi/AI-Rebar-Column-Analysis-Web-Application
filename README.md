@@ -1,4 +1,4 @@
-# RebarVista: AI Rebar Analysis Web Application
+# RebarVista: AI Rebar Column Analysis Web Application
 A tool for rebar detection and volume calculation using Detectron2 and Mask R-CNN. 
 ## Setup Instructions
 1. Clone the Detectron2 repository:
