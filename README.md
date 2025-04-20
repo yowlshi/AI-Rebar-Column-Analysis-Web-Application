@@ -88,9 +88,9 @@ Predictor initialized successfully.
 
 Here are some examples of the rebar detection results:
 
-![Rebar Detection Example 1](Example_Output_Images/output1.png)
+![Rebar Detection Example 1](AI-Rebar-Analysis-Web-Application/Example Output Images/output1.png)
 
-![Rebar Detection Example 2](Example_Output_Images/output1.png)
+![Rebar Detection Example 2](AI-Rebar-Analysis-Web-Application/Example Output Images/output1.png)
 
 ## Important Notes
 
