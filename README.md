@@ -10,7 +10,7 @@ A tool for rebar detection and volume calculation using Detectron2 and Mask R-CN
    ```
 
 2. Download the required model files from our Google Drive repository:
-   - Access all model files here: [Web APP Models](https://drive.google.com/drive/folders/1bXmBKyZlDxDyZifHVBVSFXJZoFofEVYZ?usp=sharing)
+   - Access all model files here: [RebarVista Model Files](https://drive.google.com/drive/folders/1bXmBKyZlDxDyZifHVBVSFXJZoFofEVYZ?usp=sharing)
    - You'll need both `R-101.pkl` and `model_final.pth`
 
 3. Update the model configuration paths in `models/mask_rcnn_R_101_FPN_3x.yaml`:
@@ -88,9 +88,11 @@ Predictor initialized successfully.
 
 Here are some examples of the rebar detection results:
 
-![Rebar Detection Example 1](AI-Rebar-Analysis-Web-Application/Example%20Output%20Images/output1.png)
+![Rebar Detection Example 1](Example%20Output%20Images/output1.png)
+*Rebar detection with instance segmentation*
 
-![Rebar Detection Example 2](AI-Rebar-Analysis-Web-Application/Example%20Output%20Images/output2.png)
+![Rebar Detection Example 2](Example%20Output%20Images/output2.png)
+*Rebar detection with instance segmentation*
 
 ## Important Notes
 
