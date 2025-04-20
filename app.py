@@ -24,8 +24,9 @@ CORS(app)
 
 warnings.filterwarnings("ignore", category=UserWarning, module="torch")
 
-MODEL_CONFIG_PATH = "C:/Users/angelo/Downloads/Angelo/Rebar web app/model/mask_rcnn_R_101_FPN_3x.yaml"
-MODEL_WEIGHTS_PATH = "C:/Users/angelo/Downloads/Angelo/Rebar web app/model/model_final.pth"
+#change the paths of the models
+MODEL_CONFIG_PATH = "C:/Users/.../model/mask_rcnn_R_101_FPN_3x.yaml"
+MODEL_WEIGHTS_PATH = "C:/Users/.../model/model_final.pth"
 
 SCALE_FACTOR_CM_PER_PIXEL = 0.1
 WIDTH_OFFSET_CM = 45.0
